@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".planCreator"
+    android:orientation="horizontal"
+>
+    <ImageView
+        android:layout_width="14dp"
+        android:layout_height="match_parent"
+        android:src="@drawable/plancreator_slab"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="23dp"
+        android:layout_marginBottom="23dp"
+        android:translationZ="20dp"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="-11dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/creatorbackground"
+        android:elevation="5dp"
+        android:onClick="expand"
+        android:orientation="vertical"
+        android:translationZ="1dp">
+
+        <TextView
+            android:id="@+id/plannerID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="350dp"
+            android:layout_marginTop="5dp"
+            android:gravity="right"
+            android:text="ID: " />
+
+        <LinearLayout
+            android:id="@+id/planLayouts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="35dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:animateLayoutChanges="true"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:animateLayoutChanges="true">
+
+                <TextView
+                    android:id="@+id/planTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Title"
+                    android:textColor="@color/black"
+                    android:textSize="24dp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_width="8dp"
+                    android:layout_height="8dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_toRightOf="@id/planTitle"
+                    android:src="@drawable/greencircle"
+                    android:translationZ="20dp" />
+
+                <TextView
+                    android:id="@+id/plandate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginTop="7dp"
+                    android:layout_toRightOf="@id/planTitle"
+                    android:text="26 April 2023"
+                    android:textColor="#21760B"
+                    android:textSize="16dp" />
+
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/planDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/planTitle"
+                android:text="26 April 2023"
+                android:textColor="#5D5C5C"
+                android:textSize="16dp"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginTop="2dp"
+                android:animateLayoutChanges="true">
+
+                <ImageView
+                    android:id="@+id/pinLocationIcon"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginStart="-3dp"
+                    android:src="@drawable/plancreator_pinlocation"
+                    android:translationZ="20dp" />
+
+                <TextView
+                    android:id="@+id/planLocation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="13dp"
+                    android:layout_toRightOf="@id/pinLocationIcon"
+                    android:text="Luneta Park"
+                    android:textColor="#5D5C5C"
+                    android:textSize="16dp" />
+
+                <ImageView
+                    android:id="@+id/planTimeIcon"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginStart="22dp"
+                    android:layout_toRightOf="@id/planLocation"
+                    android:src="@drawable/plancreator_time"
+                    android:translationZ="20dp" />
+
+                <TextView
+                    android:id="@+id/planTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="13dp"
+                    android:layout_toRightOf="@id/planTimeIcon"
+                    android:text="26 April 2023"
+                    android:textColor="#5D5C5C"
+                    android:textSize="16dp" />
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/buttonEdit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="200dp"
+                android:text="Edit"
+                android:visibility="gone" />
+
+        </LinearLayout>
+        <CheckBox
+            android:id="@+id/checkBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"/>
+    </RelativeLayout>
+
+</LinearLayout>
